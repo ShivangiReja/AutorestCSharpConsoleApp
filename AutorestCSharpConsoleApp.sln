@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutorestCSharpConsoleApp", "AutorestCSharpConsoleApp.csproj", "{A9AFFCAB-D79D-4B8D-8002-47165B3C30E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9AFFCAB-D79D-4B8D-8002-47165B3C30E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9AFFCAB-D79D-4B8D-8002-47165B3C30E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9AFFCAB-D79D-4B8D-8002-47165B3C30E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9AFFCAB-D79D-4B8D-8002-47165B3C30E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D8AB6B9-F479-47CF-B141-9A114586E913}
+	EndGlobalSection
+EndGlobal
