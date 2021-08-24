@@ -8,20 +8,20 @@
 namespace AutorestCSharpConsoleApp.Models
 {
     /// <summary> . </summary>
-    public partial class ModelClass
+    public partial class ModelClassTest
     {
-        /// <summary> Initializes a new instance of ModelClass. </summary>
+        /// <summary> Initializes a new instance of ModelClassTest. </summary>
         /// <param name="enumProperty"> More Letters. </param>
-        public ModelClass(EnumProperty enumProperty)
+        public ModelClassTest(EnumProperty enumProperty)
         {
             EnumProperty = enumProperty;
         }
 
-        /// <summary> Initializes a new instance of ModelClass. </summary>
-        /// <param name="stringProperty"> . </param>
+        /// <summary> Initializes a new instance of ModelClassTest. </summary>
+        /// <param name="stringProperty"></param>
         /// <param name="enumProperty"> More Letters. </param>
         /// <param name="objProperty"> The product documentation. </param>
-        internal ModelClass(string stringProperty, EnumProperty enumProperty, Product objProperty)
+        internal ModelClassTest(string stringProperty, EnumProperty enumProperty, Product objProperty)
         {
             StringProperty = stringProperty;
             EnumProperty = enumProperty;

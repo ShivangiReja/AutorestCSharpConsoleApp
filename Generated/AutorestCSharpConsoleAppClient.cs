@@ -39,7 +39,7 @@ namespace AutorestCSharpConsoleApp
 
         /// <param name="value"> The ModelClass to use. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
-        public virtual async Task<Response<ModelClass>> OperationModelAsync(ModelClass value, CancellationToken cancellationToken = default)
+        public virtual async Task<Response<ModelClassTest>> OperationModelAsync(ModelClassTest value, CancellationToken cancellationToken = default)
         {
             using var scope = _clientDiagnostics.CreateScope("AutorestCSharpConsoleAppClient.OperationModel");
             scope.Start();
@@ -56,7 +56,7 @@ namespace AutorestCSharpConsoleApp
 
         /// <param name="value"> The ModelClass to use. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
-        public virtual Response<ModelClass> OperationModel(ModelClass value, CancellationToken cancellationToken = default)
+        public virtual Response<ModelClassTest> OperationModel(ModelClassTest value, CancellationToken cancellationToken = default)
         {
             using var scope = _clientDiagnostics.CreateScope("AutorestCSharpConsoleAppClient.OperationModel");
             scope.Start();

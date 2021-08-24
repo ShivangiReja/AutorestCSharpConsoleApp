@@ -28,14 +28,12 @@ namespace AutorestCSharpConsoleApp
         /// <param name="endpoint"> server parameter. </param>
         public AutorestCSharpConsoleAppRestClient(ClientDiagnostics clientDiagnostics, HttpPipeline pipeline, Uri endpoint = null)
         {
-            endpoint ??= new Uri("");
-
-            this.endpoint = endpoint;
+            this.endpoint = endpoint ?? new Uri("");
             _clientDiagnostics = clientDiagnostics;
             _pipeline = pipeline;
         }
 
-        internal HttpMessage CreateOperationModelRequest(ModelClass value)
+        internal HttpMessage CreateOperationModelRequest(ModelClassTest value)
         {
             var message = _pipeline.CreateMessage();
             var request = message.Request;
@@ -55,7 +53,7 @@ namespace AutorestCSharpConsoleApp
         /// <param name="value"> The ModelClass to use. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         /// <exception cref="ArgumentNullException"> <paramref name="value"/> is null. </exception>
-        public async Task<Response<ModelClass>> OperationModelAsync(ModelClass value, CancellationToken cancellationToken = default)
+        public async Task<Response<ModelClassTest>> OperationModelAsync(ModelClassTest value, CancellationToken cancellationToken = default)
         {
             if (value == null)
             {
@@ -68,9 +66,9 @@ namespace AutorestCSharpConsoleApp
             {
                 case 200:
                     {
-                        ModelClass value0 = default;
+                        ModelClassTest value0 = default;
                         using var document = await JsonDocument.ParseAsync(message.Response.ContentStream, default, cancellationToken).ConfigureAwait(false);
-                        value0 = ModelClass.DeserializeModelClass(document.RootElement);
+                        value0 = ModelClassTest.DeserializeModelClassTest(document.RootElement);
                         return Response.FromValue(value0, message.Response);
                     }
                 default:
@@ -81,7 +79,7 @@ namespace AutorestCSharpConsoleApp
         /// <param name="value"> The ModelClass to use. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         /// <exception cref="ArgumentNullException"> <paramref name="value"/> is null. </exception>
-        public Response<ModelClass> OperationModel(ModelClass value, CancellationToken cancellationToken = default)
+        public Response<ModelClassTest> OperationModel(ModelClassTest value, CancellationToken cancellationToken = default)
         {
             if (value == null)
             {
@@ -94,9 +92,9 @@ namespace AutorestCSharpConsoleApp
             {
                 case 200:
                     {
-                        ModelClass value0 = default;
+                        ModelClassTest value0 = default;
                         using var document = JsonDocument.Parse(message.Response.ContentStream);
-                        value0 = ModelClass.DeserializeModelClass(document.RootElement);
+                        value0 = ModelClassTest.DeserializeModelClassTest(document.RootElement);
                         return Response.FromValue(value0, message.Response);
                     }
                 default:

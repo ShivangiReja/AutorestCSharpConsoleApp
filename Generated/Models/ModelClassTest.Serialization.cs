@@ -10,7 +10,7 @@ using Azure.Core;
 
 namespace AutorestCSharpConsoleApp.Models
 {
-    public partial class ModelClass : IUtf8JsonSerializable
+    public partial class ModelClassTest : IUtf8JsonSerializable
     {
         void IUtf8JsonSerializable.Write(Utf8JsonWriter writer)
         {
@@ -30,7 +30,7 @@ namespace AutorestCSharpConsoleApp.Models
             writer.WriteEndObject();
         }
 
-        internal static ModelClass DeserializeModelClass(JsonElement element)
+        internal static ModelClassTest DeserializeModelClassTest(JsonElement element)
         {
             Optional<string> stringProperty = default;
             EnumProperty enumProperty = default;
@@ -58,7 +58,7 @@ namespace AutorestCSharpConsoleApp.Models
                     continue;
                 }
             }
-            return new ModelClass(stringProperty.Value, enumProperty, objProperty.Value);
+            return new ModelClassTest(stringProperty.Value, enumProperty, objProperty.Value);
         }
     }
 }
